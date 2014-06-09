@@ -1,6 +1,2 @@
-local_config.rb
-config.yaml
+.idea
 .vagrant
-.#*
-#*
-*.box

@@ -2,9 +2,9 @@
 # vi: set ft=ruby :
 
 # Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
-if not VAGRANTFILE_API_VERSION
+#if not VAGRANTFILE_API_VERSION
   VAGRANTFILE_API_VERSION = "2"
-end
+#end
 
 require 'yaml'
 conf = YAML.load(File.open('config.yaml'))
@@ -55,6 +55,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # All Vagrant configuration is done here. The most common configuration
   # options are documented and commented below. For a complete reference,
   # please see the online documentation at vagrantup.com.
+
+  if Vagrant.has_plugin?("vagrant-proxyconf")
+    config.proxy.http     = "http://proxy-us.intel.com:911/"
+    config.proxy.https    = "http://proxy-us.intel.com:911/"
+    config.proxy.no_proxy = "localhost,127.0.0.1,.intel.com"
+  end
 
   config.vm.define "manager" do |manager|
     configure_vm("manager", manager.vm, conf)

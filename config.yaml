@@ -1,9 +1,8 @@
 manager_hostname: api
-compute1_hostname: compute
+compute1_hostname: compute1
 stack_pass: password
-stack_sshkey: >
-  AAAAB3NzaC1yc2EAAAABIwAAAQEArseBVfx9DLhFu1kjw0Pe2UCpo1PGfod8wyC9SHyozwD1Bj88jizxREdEfVQ+Eg4C6PHhZ0aHocvXRv5sB6FZCcohY2fyN4P0cwXIC+Dm2ZDgN6pAcjLvzvtV7ZVSk7yV/B4/dzwStR2SnBvRDUmiVpBk1uxVy9y4a1sl+CX831JefO62ZupQjCaTxd9vSAIeP84IsZsQ50
-  xbikm8HxInolLVxLBQWEaYUi5n6UoGLBCVG55ek2ay7vPVPP3M0IurtIGEV0vJK/WS1aWHO1eqqNVTz5Qt1o1m9pbMmWGSQaMh3Rv+iwGF7tLrMq5d9f7Quhzta5A4ntBCRuoDK924ZQ==
+stack_sshkey: >-
+  AAAAB3NzaC1yc2EAAAABIwAAAQEArseBVfx9DLhFu1kjw0Pe2UCpo1PGfod8wyC9SHyozwD1Bj88jizxREdEfVQ+Eg4C6PHhZ0aHocvXRv5sB6FZCcohY2fyN4P0cwXIC+Dm2ZDgN6pAcjLvzvtV7ZVSk7yV/B4/dzwStR2SnBvRDUmiVpBk1uxVy9y4a1sl+CX831JefO62ZupQjCaTxd9vSAIeP84IsZsQ50xbikm8HxInolLVxLBQWEaYUi5n6UoGLBCVG55ek2ay7vPVPP3M0IurtIGEV0vJK/WS1aWHO1eqqNVTz5Qt1o1m9pbMmWGSQaMh3Rv+iwGF7tLrMq5d9f7Quhzta5A4ntBCRuoDK924ZQ==
 # Define the setup mode to install the environment
 # valid values: grenade/devstack default is devstack
 setup_mode: devstack
@@ -17,7 +16,7 @@ setup_mode: devstack
 # A non upstream for the base box, used to speed things up.
 # Choose one of box_name (for a locally added box) or box_url
 # for the url of a nearby box.
-#box_name: 'my.favorite'
+box_name: "hashicorp/precise64"
 #box_url: http://gallifrey/vagrant/devstack-2014-02-19.box
 
 # Local devstack options
